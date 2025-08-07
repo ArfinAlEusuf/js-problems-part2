@@ -19,3 +19,18 @@ function getCheapestPhone(phones){
 
 const cheap = getCheapestPhone(phones);
 console.log('Cheapest phone is: ', cheap)
+
+
+function getExpensivePhone(phones){
+    let highest = phones[0]; 
+    for(const phone of phones){
+        if (phone.price > highest.price ){
+            highest = phone
+        }
+    }
+    return highest;
+}
+
+const expensive = getExpensivePhone(phones);
+console.log('Expensive phone is: ', expensive)
+
